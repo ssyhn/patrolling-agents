@@ -1,0 +1,23 @@
+[gd_scene format=3 uid="uid://bxpr7mjtnos4a"]
+
+[ext_resource type="Texture2D" uid="uid://hmvs2aigft4l" path="res://assets/regular_agent.png" id="1_4io2a"]
+[ext_resource type="Script" uid="uid://bo0ujq61qv8t1" path="res://scripts/agents/agent_regular.gd" id="1_75u8a"]
+
+[node name="AgentRegular" type="CharacterBody2D" unique_id=772186207]
+scale = Vector2(0.3, 0.3)
+collision_layer = 2
+script = ExtResource("1_75u8a")
+
+[node name="NavigationAgent2D" type="NavigationAgent2D" parent="." unique_id=1744556844]
+
+[node name="SelectionHighlight" type="Polygon2D" parent="." unique_id=225533429]
+visible = false
+position = Vector2(4.759201, 0)
+scale = Vector2(0.9716714, 1)
+polygon = PackedVector2Array(-181, -172, 168, -170, 167, 174, -185, 175)
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=976615707]
+texture = ExtResource("1_4io2a")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="." unique_id=985183716]
+polygon = PackedVector2Array(-150, -150, -150, 150, 150, 150, 150, -150)
