@@ -38,7 +38,7 @@ func _spawn_agent(pos):
 func _get_agent_at(pos):
 	for child in get_children():
 		if child.has_method("set_destination"):
-			if child.global_position.distance_to(pos) < 20:
+			if child.global_position.distance_to(pos) < 50:
 				return child
 	return null
 
@@ -56,7 +56,7 @@ func _input(event: InputEvent) -> void:
 	if Input.is_action_just_pressed("toggle_mode"):
 		if current_spawn_mode == SpawnMode.AGENT:
 			current_spawn_mode = SpawnMode.PATROLLER
-			mode_label.text = "MODE : PATROLLER"
+			mode_label.text = "MODE (TAB) : PATROLLER"
 		else:
 			current_spawn_mode = SpawnMode.AGENT
-			mode_label.text = "MODE : AGENT"
+			mode_label.text = "MODE (TAB) : AGENT"
